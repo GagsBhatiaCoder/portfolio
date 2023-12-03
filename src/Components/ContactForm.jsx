@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from './Navbar'
 import Footer from './Footer'
+import { Link } from 'react-router-dom'
 import FloatWatsappBtn from './FloatWatsappBtn'
 
 export default function ContactForm() {
@@ -14,16 +15,16 @@ export default function ContactForm() {
                     <h4 className='form-title' style={{marginBottom:"5px"}}>Lets get in touch</h4>
                     <p>We are open for any suggestion <br />or just to have a chat...</p>
                     <div>
-                        <a href="https://maps.app.goo.gl/qZZwnYHSDLvnSvPX6" className='form-links' target='_blank'><i className="fa-solid fa-location-dot form-icon" style={{padding:"9px 12px"}}></i> C-19 Shahdana Colony Bareilly, Uttar Pradesh</a>
+                        <Link to="https://maps.app.goo.gl/qZZwnYHSDLvnSvPX6" className='form-links' target='_blank'><i className="fa-solid fa-location-dot form-icon" style={{padding:"9px 12px"}}></i> C-19 Shahdana Colony Bareilly, Uttar Pradesh</Link>
                     </div>
                     <div>
-                        <a href="tel:+918979266475" className='form-links'><i className="fa-solid fa-phone form-icon"></i>+918979266475</a>
+                        <Link to="tel:+918979266475" className='form-links'><i className="fa-solid fa-phone form-icon"></i>+918979266475</Link>
                     </div>
                     <div>
-                        <a href="mailto:dm.gaganbhatia@gmail.com" className='form-links'><i className="fa-regular fa-envelope form-icon"></i> dm.gaganbhatia@gmail.com</a>
+                        <Link to="mailto:dm.gaganbhatia@gmail.com" className='form-links'><i className="fa-regular fa-envelope form-icon"></i> dm.gaganbhatia@gmail.com</Link>
                     </div>
                     <div> 
-                        <a href="#" className='form-links'><i className="fa-solid fa-globe form-icon"></i>www.gagsthedeveloper.com</a>
+                        <Link to="#" className='form-links'><i className="fa-solid fa-globe form-icon"></i>www.gagsthedeveloper.com</Link>
                     </div>
                 </div>
                 <div className='contact-form'>

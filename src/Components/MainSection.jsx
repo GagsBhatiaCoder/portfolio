@@ -1,5 +1,6 @@
 import React from 'react'
 import Gagan from '../assets/GagsGrey.jpg'
+import {Link} from 'react-router-dom'
 
 export default function MainSection() {
   return (
@@ -22,26 +23,26 @@ export default function MainSection() {
             <span>
               <i className="fa-solid fa-calendar-day"></i> 30 August 1992
             </span>
-            <a href="tel:+918979266475" >
+            <Link to="tel:+918979266475" >
               <i className="fa-solid fa-phone"></i> +91-8979266475
-            </a>
-            <a href="mailto:dm.gaganbhatia@gmail.com" target='_blank'>
+            </Link>
+            <Link to="mailto:dm.gaganbhatia@gmail.com" target='_blank'>
             <i className="fa-regular fa-envelope"></i> dm.gaganbhatia@gmail.com
-            </a>
-            <a href="https://maps.app.goo.gl/qZZwnYHSDLvnSvPX6" target='_blank'>
+            </Link>
+            <Link to="https://maps.app.goo.gl/qZZwnYHSDLvnSvPX6" target='_blank'>
               <i className="fa-solid fa-house"></i> Shahdana Colony, Bareilly
-            </a>
+            </Link>
           </div>
           <div className="social-media-icons">
-            <a href="https://www.linkedin.com/in/gagan-bhatia-6bb42714b/" target="_blank">
+            <Link to="https://www.linkedin.com/in/gagan-bhatia-6bb42714b/" target="_blank">
               <i className="fa-brands fa-linkedin linkedin-icon"></i>
-            </a>
-            <a href="https://github.com/GagsBhatiaCoder" target="_blank">
+            </Link>
+            <Link to="https://github.com/GagsBhatiaCoder" target="_blank">
               <i className="fa-brands fa-github github-icon" ></i>
-            </a>
-            <a href="https://instagram.com/gagsbhatia?igshid=OGQ5ZDc2ODk2ZA==" target="_blank">
+            </Link>
+            <Link to="https://instagram.com/gagsbhatia?igshid=OGQ5ZDc2ODk2ZA==" target="_blank">
               <i className="fa-brands fa-instagram insta-icon"></i>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
