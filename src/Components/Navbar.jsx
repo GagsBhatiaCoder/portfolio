@@ -46,12 +46,16 @@ export default function Navbar() {
     const handleNavigation = (url) => {
       SetClicked(false);
       navigate(url)
+      scrollToTop()
 
+    }
+    const scrollToTop = () => {
+      window.scrollTo(0, 0)
     }
   return (
     <>
        <nav className="navbarItems">
-      <Link to="/" className="logo" ><img className="logo-img" src={Logo} alt="Company Logo" /></Link>
+      <Link to="/" onClick={scrollToTop} className="logo" ><img className="logo-img" src={Logo} alt="Company Logo" /></Link>
       <div className="menuBars" onClick={toggleMenu}>
       <i className={clicked ? "fas fa-times" : "fas fa-bars"}></i>
       </div>
@@ -59,7 +63,7 @@ export default function Navbar() {
     {MenuData.map((item, index) => {
       return(
         <li key={index}>
-          <Link to={item.url} className={item.cName} onClick={() => handleNavigation(item.url)}> <i className={item.icon} ></i>{item.title}</Link>
+          <Link to={item.url} className={item.cName} onClick={() => handleNavigation(item.url) }> <i className={item.icon} ></i>{item.title}</Link>
           </li>
       )
     })}

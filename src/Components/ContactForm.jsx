@@ -29,11 +29,11 @@ export default function ContactForm() {
                 </div>
                 <div className='contact-form'>
                     <h4 className='form-title'>Contact Us</h4>
-                    <form action="">
-                        <input className='form-input' type="text" placeholder='Name*'  required /> <br />
-                        <input className='form-input' type="mail" placeholder='Email*' required /> <br />
-                        <input className='form-input' type="number" placeholder='Number*'  required /> <br />
-                        <textarea className='form-input' name="" id="" cols="20" rows="5" placeholder='Message'></textarea> <br />
+                    <form  method='post' action='https://script.google.com/macros/s/AKfycbyiNQs1frEt_Y7iCaHN0cDlebjEv2p_7LcxwNiewwJJhyqPx2nP0_Il4G9ZUF6pzGsh/exec'>
+                        <input className='form-input' type="text" placeholder='Name*'   name='name'  required /> <br />
+                        <input className='form-input' type="mail" placeholder='Email*' name='email'  required /> <br />
+                        <input className='form-input' type="number" placeholder='Number*'  name='number'  required /> <br />
+                        <textarea className='form-input' name="message"  id="" cols="20" rows="5" placeholder='Message'></textarea> <br />
                         <button className='form-btn' type='submit'> Submit </button>
                     </form>
                 </div>

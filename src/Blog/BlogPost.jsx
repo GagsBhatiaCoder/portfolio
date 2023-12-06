@@ -6,6 +6,9 @@ import Img1 from '../assets/Img1.jpg'
 
 
 export default function BlogPost({admin, id, title, content, date, img }) {
+  const scrollToTop = () => {
+    window.scrollTo(0, 0)
+  }
   return (
     <div className='blog-post'>
        <img src={img} alt={title} style={{ width: '100%', borderRadius:"5px" }} />
@@ -16,7 +19,7 @@ export default function BlogPost({admin, id, title, content, date, img }) {
            </div>
         <h3>{title}</h3>
         <p>{content.slice(0, 100)}...</p>
-        <Link className='read-more-btn' to={`/blog/${id}`}>Read More</Link>
+        <Link className='read-more-btn' onClick={scrollToTop} to={`/blog/${id}`}>Read More</Link>
       </div>
     </div>
   )

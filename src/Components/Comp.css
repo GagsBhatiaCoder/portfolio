@@ -177,6 +177,7 @@ body {
 }
 .form-btn:hover {
   background-color: #45cc86;
+  cursor: pointer;
 }
 @media (max-width: 750px) {
   .contact-container {
