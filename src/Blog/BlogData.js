@@ -32,6 +32,7 @@ const blogPosts = [
     content:
       "In recent years, concerns have mounted about the privacy and security of user data on Facebook, leading many to question if the social media giant sells user information. While Facebook does utilize targeted advertising based on user preferences, it explicitly states that it does not sell individual user data to third parties. Instead, advertisers are provided with aggregated and anonymized data to tailor their campaigns. However, the fine line between personalized ads and data privacy remains a topic of scrutiny. Users are encouraged to stay vigilant about privacy settings and understand the nuanced dynamics of data usage in the ever-evolving digital landscape.",
       date: "2023-11-17",
+      admin: "Author",
     img: Img3,
   },
   {
@@ -40,6 +41,7 @@ const blogPosts = [
     content:
       "As we navigate the ever-evolving landscape of technology, the future of coding promises groundbreaking innovations. Artificial Intelligence (AI) and Machine Learning (ML) are poised to play pivotal roles, automating routine tasks and augmenting development processes. Low-code and no-code platforms are gaining momentum, empowering non-developers to contribute to software creation. Quantum computing holds the potential to revolutionize complex problem-solving. DevOps and continuous integration are becoming integral, fostering seamless collaboration between development and operations teams. With an emphasis on sustainability, eco-friendly coding practices are gaining traction. As we peer into the future, adaptability and a commitment to learning will be paramount for coders, ensuring they stay at the forefront of this dynamic and transformative field.",
     date: "2023-11-17",
+    admin: "Author",
     img: Img4,
   },
   {
@@ -48,6 +50,7 @@ const blogPosts = [
     content:
       "In the pursuit of becoming versatile programmers, newcomers often find themselves attempting to master every programming language available, inadvertently leading to confusion and challenges. The allure of diverse skills is understandable, but spreading too thin can hinder proficiency in any one language. Learning the fundamentals thoroughly is essential before diving into a multitude of languages. A scattered focus may result in a superficial understanding, leading to errors and misconceptions. Additionally, staying updated with the constant evolution of languages becomes overwhelming. A strategic approach, focusing on mastering one language at a time, proves more effective, ensuring a solid foundation and setting the stage for a successful and less chaotic coding journey.",
     date: "2023-11-17",
+    admin: "Author",
     img: Img5,
   },
   {
@@ -55,6 +58,7 @@ const blogPosts = [
     title:" The Impact of Rapidly Advancing AI Technology on Careers",
     content:"The accelerated growth of Artificial Intelligence (AI) technology is reshaping the career landscape, presenting both challenges and opportunities. Automation, powered by AI, is streamlining routine tasks, potentially altering job requirements across various industries. Jobs centered on repetitive, rule-based tasks may face displacement, while demand for roles involving AI development, data analysis, and AI ethics is on the rise. Adaptability and upskilling become critical as AI becomes integrated into diverse sectors. Embracing AI technology as a complement to human skills is key, fostering new career paths and emphasizing the need for continuous learning. As the AI revolution unfolds, proactive career planning and a flexible mindset will be paramount for navigating this transformative era.",
     date:"24-11-2023",
+    admin: "Author",
    img: Img6
   }
 ];

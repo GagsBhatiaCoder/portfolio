@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useEffect, useState} from 'react';
 import './App.css';
 import Home from './Pages/Home';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -12,10 +12,12 @@ import { FadeLoader } from 'react-spinners';
 
 function App() {
   const [loading, setLoading] = useState(true);
-
-  window.onload = () => {
-   setLoading(false)
-  }
+ useEffect(() => {
+  setLoading(false)
+ },[])
+  // window.onload = () => {
+   
+  // }
   return (
     <>
     { loading? <div style={{display:"flex", justifyContent:"center", alignItems:"center", height:"100vh"}}><FadeLoader

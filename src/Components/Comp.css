@@ -282,7 +282,8 @@ body {
     font-size: 2rem;
   }
   .contact-info i,
-  .contact-info a {
+  .contact-info a,
+  .contact-info span {
     font-size: 0.7rem;
   }
 }
