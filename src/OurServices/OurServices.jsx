@@ -4,6 +4,7 @@ import './OurService.css'
 
 
 export default function OurServices() {
+  document.title = "Portfolio Website || Service"
   return (
     <div style={{padding:"0 2rem"}} id='services'>
       <div className="our-services">

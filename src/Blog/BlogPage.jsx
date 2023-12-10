@@ -5,6 +5,7 @@ import Footer from '../Components/Footer'
 import { Link } from 'react-router-dom'
 
 export default function BlogPage() {
+  document.title = "Portfolio Website || Blog"
   return (
     <div style={{marginTop:"5rem"}}>
         <div style={{height:"20vh", display:"flex", justifyContent:"center", alignItems:"center"}}>

@@ -51,6 +51,7 @@ export default function Navbar() {
     }
     const scrollToTop = () => {
       window.scrollTo(0, 0)
+      document.title = "Portfolio Website"
     }
   return (
     <>

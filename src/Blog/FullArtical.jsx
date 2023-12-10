@@ -7,12 +7,14 @@ import './Blog.css'
 import FloatWatsappBtn from '../Components/FloatWatsappBtn';
 
 export default function FullArtical() {
+
     const { id } = useParams();
     const post = blogPosts.find((post) => post.id === parseInt(id));
   
     if (!post) {
       return <div>Article not found</div>;
     }
+    document.title = `Portfolio Website || ${post.title}`
   return (
     <div >
       <Navbar />

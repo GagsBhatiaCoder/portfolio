@@ -16,7 +16,6 @@ function App() {
   window.onload = () => {
    setLoading(false)
   }
-
   return (
     <>
     { loading? <div style={{display:"flex", justifyContent:"center", alignItems:"center", height:"100vh"}}><FadeLoader
