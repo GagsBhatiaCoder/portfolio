@@ -1,11 +1,16 @@
-import React, { useRef} from 'react'
+import React, { useRef, useState } from 'react'
 import Navbar from './Navbar'
 import Footer from './Footer'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import FloatWatsappBtn from './FloatWatsappBtn'
 
 export default function ContactForm() {
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+    const [number, setNumber] = useState('')
+    const [message, setMessage] = useState('')
 
+    const navigate = useNavigate()
     const formRef = useRef(null);
     document.title = "PortFolio Website || Contact"
     const scriptUrl = "https://script.google.com/macros/s/AKfycbzOD1JjkWNb1NsIY7nlLetmZF9iD8DsvXoUGwjx7eQPPC2rOWJ6X9pcc4XaGc1IPH1U/exec"
@@ -15,11 +20,35 @@ export default function ContactForm() {
         fetch(scriptUrl, { method: 'POST', body: new FormData(formRef.current) })
             .then(res => {
                 alert("SUCCESSFULLY SUBMITTED");
-                window.location.reload()
-                
+                setName('');
+                setEmail('')
+                setNumber('')
+                setMessage('')
+                navigate('/contact')
+
+
             })
             .catch(err => console.log(err));
 
+    }
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        switch (name) {
+            case "name":
+                setName(value)
+                break;
+            case 'email':
+                setEmail(value);
+                break;
+            case 'number':
+                setNumber(value);
+                break;
+            case 'message':
+                setMessage(value);
+                break;
+            default:
+                break;
+        }
     }
 
     return (
@@ -46,11 +75,14 @@ export default function ContactForm() {
                 <div className='contact-form'>
                     <h4 className='form-title'>Contact Us</h4>
                     <form onSubmit={handleSubmit} ref={formRef} name='portfolio-data'>
-                        <input className='form-input' type="text" placeholder='Name*'
-                              name='name' required /> <br />
-                        <input className='form-input' type="mail"  placeholder='Email*'  name='email' required /> <br />
-                        <input className='form-input' type="text" maxLength={10} pattern="\d{10}" placeholder='Number*'   name='number' required /> <br />
-                        <textarea className='form-input'   name="message" id="" cols="20" rows="5" placeholder='Message'></textarea> <br />
+                        <input className='form-input' type="text" value={name} placeholder='Name*'
+                            name='name' onChange={handleChange} required /> <br />
+                        <input className='form-input' type="mail" value={email} placeholder='Email*' 
+                        name='email'  onChange={handleChange} required /> <br />
+                        <input className='form-input' type="text" maxLength={10} pattern="\d{10}" placeholder='Number*'
+                         name='number' value={number} onChange={handleChange} required /> <br />
+                        <textarea className='form-input' name="message" id="" cols="20" rows="5"
+                         placeholder='Message' value={message} onChange={handleChange}></textarea> <br />
                         <button className='form-btn' type='submit'> Submit </button>
                     </form>
                 </div>
