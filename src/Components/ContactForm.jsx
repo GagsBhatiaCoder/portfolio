@@ -3,8 +3,10 @@ import Navbar from './Navbar'
 import Footer from './Footer'
 import { Link, useNavigate } from 'react-router-dom'
 import FloatWatsappBtn from './FloatWatsappBtn'
+import { FadeLoader } from 'react-spinners'
 
 export default function ContactForm() {
+    const [loading, setLoading] = useState(false)
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [number, setNumber] = useState('')
@@ -17,6 +19,7 @@ export default function ContactForm() {
 
     const handleSubmit = (e) => {
         e.preventDefault()
+        setLoading(true)
         fetch(scriptUrl, { method: 'POST', body: new FormData(formRef.current) })
             .then(res => {
                 alert("SUCCESSFULLY SUBMITTED");
@@ -25,6 +28,7 @@ export default function ContactForm() {
                 setNumber('')
                 setMessage('')
                 navigate('/contact')
+                setLoading(false)
 
 
             })
@@ -53,7 +57,15 @@ export default function ContactForm() {
 
     return (
         <>
+       
             <Navbar />
+            {loading && (<div className='loader' style={{ position: "fixed", top: 0, left: 0, width: "100%", height: "100%", display: "flex", justifyContent: "center", alignItems: "center", backgroundColor: "rgba(255, 255, 255, 0.8)", zIndex: 1000}}><FadeLoader
+      color={"#000"}
+      loading={loading}
+      size={100}
+      aria-label="Loading Spinner"
+      data-testid="loader"
+    /> </div>)}
             <FloatWatsappBtn />
             <div className='contact-container'>
                 <div className='contact-details'>
@@ -87,7 +99,7 @@ export default function ContactForm() {
                     </form>
                 </div>
             </div>
-            <Footer />
+            <Footer /> 
         </>
     )
 }

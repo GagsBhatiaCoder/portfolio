@@ -179,6 +179,9 @@ body {
   background-color: #45cc86;
   cursor: pointer;
 }
+.loader{
+  background: none;
+}
 @media (max-width: 750px) {
   .contact-container {
     flex-direction: column-reverse;
