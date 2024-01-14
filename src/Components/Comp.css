@@ -17,6 +17,7 @@ body {
   height: 80px;
   border-radius: 15px;
   position: fixed;
+  z-index: 1;
   top: 0px;
   left: 50%;
   transform: translate(-50%);
@@ -74,7 +75,7 @@ body {
 .menuBars {
   display: none;
 }
-.menuBars:hover{
+.menuBars:hover {
   cursor: pointer;
 }
 
@@ -154,18 +155,18 @@ body {
   border-radius: 30px;
   margin: 0 10px 10px 0;
 }
+.form-input {
+  border: none;
+  border-bottom: 1px solid #dbd6d6;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  outline: none;
+  padding: 0.5rem;
+  width: 100%;
+}
 .contact-form {
   flex: 1;
   padding: 2rem;
-}
-.form-input {
-  width: 100%;
-  font-size: 1rem;
-  padding: 0.5rem;
-  margin-bottom: 0.5rem;
-  border: none;
-  outline: none;
-  border-bottom: 1px solid rgb(219, 214, 214);
 }
 
 .form-btn {
@@ -179,7 +180,7 @@ body {
   background-color: #45cc86;
   cursor: pointer;
 }
-.loader{
+.loader {
   background: none;
 }
 @media (max-width: 750px) {
@@ -187,31 +188,27 @@ body {
     flex-direction: column-reverse;
   }
 }
-@media(max-width:400px){
-  .form-title{
+@media (max-width: 400px) {
+  .form-title {
     font-size: 2rem;
   }
-  .form-icon, .form-links{
-    font-size: .6rem;
+  .form-icon,
+  .form-links {
+    font-size: 0.6rem;
   }
-  
 }
 
 /* MainSection Css Starts Here */
-.main-container {
-  display: flex;
-  width: 80%;
-  padding: 20px;
-  margin: 8rem auto;
-  background: #fff;
-  border-radius: 10px;
-}
+
+.slide-in-right{animation:slide-in-right 1s cubic-bezier(.25,.46,.45,.94) both}
+.slide-in-left{animation:slide-in-left 1.2s cubic-bezier(.25,.46,.45,.94) both}
+@keyframes slide-in-right{0%{transform:translateX(1000px);opacity:0}100%{transform:translateX(0);opacity:1}}
+@keyframes slide-in-left{0%{transform:translateX(-1000px);opacity:0}100%{transform:translateX(0);opacity:1}}
 .author-box {
   width: 100%;
 }
 .author-img {
   width: 100%;
-  border-radius: 15px;
   margin-top: 2.8rem;
 }
 .author-info {
@@ -237,7 +234,8 @@ body {
 .contact-info {
   margin: 10px 0;
 }
-.contact-info a, .contact-info span {
+.contact-info a,
+.contact-info span {
   text-decoration: none;
   color: #000;
   display: block;
@@ -272,7 +270,7 @@ body {
   border-radius: 5px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1000px) {
   .main-container {
     flex-direction: column;
   }
@@ -329,10 +327,12 @@ body {
   text-align: center;
   padding: 0.5rem;
 }
+.html, .css, .javascript, .bootstrap, .react, .mysql {
+  transition: width 2s ease-in-out, background-color 0.5s ease-in-out;
+}
 .html {
   width: 90%;
   background-color: #04aa6d;
-  transition: 0.5s ease-in-out;
 }
 .css {
   width: 80%;
@@ -362,7 +362,7 @@ body {
   }
 }
 /* About Me Css Ends Here */
-/* Footer Css Starts Here */
+ /* Footer Css Starts Here */
 .footer {
   background-color: #000;
 }

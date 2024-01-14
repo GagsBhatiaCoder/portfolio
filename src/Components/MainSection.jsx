@@ -4,12 +4,12 @@ import {Link} from 'react-router-dom'
 
 export default function MainSection() {
   return (
-    <>
-      <div className="main-container">
-        <div className="author-box">
-          <img src={Gagan} alt="" className="author-img"/>
+    <div className="p-4 " >
+      <section className="container d-sm-flex p-4 mt-5 bg-light">
+        <div className='slide-in-left'>
+          <img src={Gagan} alt="author_image" className="author-img rounded"/>
         </div>
-        <div className="author-info">
+        <div className="author-info slide-in-right ">
           <p className="title-info">Hello Everyone I am</p>
           <h2 className="author-name">Gagan Bhatia</h2>
           <h4 className="job-role">Front-end Developer</h4>
@@ -45,7 +45,7 @@ export default function MainSection() {
             </Link>
           </div>
         </div>
-      </div>
-    </>
+      </section>
+    </div>
   )
 }

@@ -8,7 +8,7 @@ export default function AboutMe() {
   return (
     <div className="about-container" id="about">
       <div className="about-info">
-        <div style={{padding:"2rem 0"}}>
+        <div className="p-1 p-sm-4">
           <h2 style={{textTransform:"uppercase", textAlign:"center"}}>About Myself</h2>
           <p style={{textAlign:"center"}}>
           Experienced front-end developer specializing in React.js, HTML, CSS,
