@@ -12,7 +12,6 @@ import { FadeLoader } from 'react-spinners';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
-
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       // After the delay, set isLoading to false to indicate that the page has loaded
@@ -22,6 +21,9 @@ function App() {
     // Cleanup function to clear the timeout in case the component unmounts
     return () => clearTimeout(timeoutId);
   }, []);
+  // window.onload = () => {
+   
+  // }
   return (
     <>
     { isLoading ? <div style={{display:"flex", justifyContent:"center", alignItems:"center", height:"100vh"}}><FadeLoader
