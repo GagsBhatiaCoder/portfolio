@@ -11,18 +11,22 @@ import OurServicePage from './OurServices/OurServicePage';
 import { FadeLoader } from 'react-spinners';
 
 function App() {
-  const [loading, setLoading] = useState(true);
- useEffect(() => {
-  setLoading(false)
- },[])
-  // window.onload = () => {
-   
-  // }
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      // After the delay, set isLoading to false to indicate that the page has loaded
+      setIsLoading(false);
+    }, 2000);
+
+    // Cleanup function to clear the timeout in case the component unmounts
+    return () => clearTimeout(timeoutId);
+  }, []);
   return (
     <>
-    { loading? <div style={{display:"flex", justifyContent:"center", alignItems:"center", height:"100vh"}}><FadeLoader
+    { isLoading ? <div style={{display:"flex", justifyContent:"center", alignItems:"center", height:"100vh"}}><FadeLoader
       color={"#000"}
-      loading={loading}
+      loading={isLoading}
       size={100}
       aria-label="Loading Spinner"
       data-testid="loader"

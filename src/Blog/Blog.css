@@ -42,17 +42,7 @@ body{
   width: 50%;
   margin: 10rem auto auto;
 }
-.fullartical-img{
-  width: 100%;
-}
-.fullartical-content{
-  font-size: 1.5rem;
-}
-.blog-title{
-  font-size: 3rem; 
-  text-align: center; 
-  padding: 20px; 
-}
+
 @media (max-width: 750px){
   .blog-container{
     display: flex;
@@ -63,7 +53,7 @@ body{
   }
 }
 @media(max-width:300px){
-.blog-title, .fullartical-title{
+.blog-title{
   font-size: 1.5rem;
 }
 .blog-icon, .fullartical-span, .fullartical-content{

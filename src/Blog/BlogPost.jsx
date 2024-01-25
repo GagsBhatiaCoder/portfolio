@@ -1,16 +1,21 @@
 import React from 'react';
 import './Blog.css'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Img1 from '../assets/Img1.jpg'
 
 
 
 export default function BlogPost({admin, id, title, content, date, img }) {
+  const navigate = useNavigate()
   const scrollToTop = () => {
     window.scrollTo(0, 0)
   }
+
+  const handleClick = () => {
+    navigate(`/blog/${id}`)
+  }
   return (
-    <div className='blog-post'>
+    <div className='blog-post' onClick={handleClick} style={{cursor:"pointer"}}>
        <img src={img} alt={title} style={{ width: '100%', borderRadius:"5px" }} />
       <div style={{ padding: '1rem' }}>
         <div className='blog-icon-box'>

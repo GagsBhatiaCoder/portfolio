@@ -19,16 +19,16 @@ export default function FullArtical() {
     <div >
       <Navbar />
       <FloatWatsappBtn />
-      <div className='fullartical'>
+      <div className='fullartical container'>
         <div className='fullartical-img-box'>
-        <img src={post.img} alt="" className='fullartical-img'/>
-        <div style={{display:"flex", justifyContent:"space-between"}}>
+        <img src={post.img} alt={post.title} className='m-1 rounded' style={{width:"100%"}}/>
+        <div className=' d-sm-flex justify-content-between' >
         <span className='fullartical-span'><i className="fa-regular fa-user blog-icon"></i> {post.admin}</span>
            <span className='fullartical-span'><i className="fa-regular fa-calendar blog-icon"></i>{post.date}</span>
         </div>
         </div>
-      <h1 className='fullartical-title'>{post.title}</h1>
-      <p className='fullartical-content'>{post.content}</p>
+      <h2 className='p-2 m-2 text-center'>{post.title}</h2>
+      <p className='fs-5'>{post.content}</p>
      
       </div>
       <Footer />

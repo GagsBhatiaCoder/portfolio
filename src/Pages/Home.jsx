@@ -12,10 +12,7 @@ import { useLocation } from 'react-router-dom'
 
 
 export default function Home() { 
-  const location = useLocation();
-  useEffect(() => {
-    document.title = "Portfolio Website"
-  },[location.pathname])
+
   
    return (
     <>
