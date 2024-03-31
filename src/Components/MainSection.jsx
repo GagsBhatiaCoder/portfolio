@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom'
 export default function MainSection() {
   return (
     <div className="p-4 " >
-      <section className="container flex-column  d-md-flex p-4 rounded mt-sm-5 bg-light">
+      <section className="container d-md-flex p-4 rounded mt-sm-5 bg-light">
         <div className='slide-in-left'>
           <img src={Gagan} alt="author_image" className="author-img rounded"/>
         </div>
