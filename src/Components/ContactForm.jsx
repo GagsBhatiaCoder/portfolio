@@ -69,8 +69,8 @@ export default function ContactForm() {
             <FloatWatsappBtn />
             <div className='contact-container'>
                 <div className='contact-details'>
-                    <h4 className='form-title' style={{ marginBottom: "5px" }}>Lets get in touch</h4>
-                    <p>We are open for any suggestion <br />or just to have a chat...</p>
+                    <h4 className='form-title text-light mb-1'>Lets get in touch</h4>
+                    <p className='text-light'>We are open for any suggestion <br />or just to have a chat...</p>
                     <div>
                         <Link to="https://maps.app.goo.gl/qZZwnYHSDLvnSvPX6" className='form-links' target='_blank'><i className="fa-solid fa-location-dot form-icon" style={{ padding: "9px 12px" }}></i> C-19 Shahdana Colony Bareilly, Uttar Pradesh</Link>
                     </div>
@@ -95,7 +95,10 @@ export default function ContactForm() {
                          name='number' value={number} onChange={handleChange} required /> <br />
                         <textarea className='form-input' name="message" id="" cols="20" rows="5"
                          placeholder='Message' value={message} onChange={handleChange}></textarea> <br />
-                        <button className='form-btn' type='submit'> Submit </button>
+                         <div className='d-flex justify-content-center'>
+                         <button className='btn btn-outline-dark' type='submit'> Submit </button>
+                         </div>
+                        
                     </form>
                 </div>
             </div>

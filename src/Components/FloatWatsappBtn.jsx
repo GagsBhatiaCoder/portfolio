@@ -14,7 +14,7 @@ export default function FloatWatsappBtn() {
     <div>
       <button className='btn btn-success' onClick={handleClick}
        style={{background:"#30D24E", color:"#fff",padding: "0.5rem 0.8rem",
-       border:"none", position:"fixed", bottom:"20px", right:"20px", borderRadius:"30px", fontSize:"1.5rem"}}
+       border:"none", position:"fixed", bottom:"20px", right:"20px", borderRadius:"30px", fontSize:"1.5rem", zIndex:"1"}}
       >
         <i className="fa-brands fa-whatsapp"></i></button>
     </div>

@@ -12,6 +12,7 @@ export default function BlogPost({admin, id, title, content, date, img }) {
   }
 
   const handleClick = () => {
+    window.scrollTo(0, 0)
     navigate(`/blog/${id}`)
   }
   return (

@@ -9,8 +9,8 @@ import BlogPage from './Blog/BlogPage';
 import AboutMePage from './Components/AboutMePage';
 import OurServicePage from './OurServices/OurServicePage';
 import { FadeLoader } from 'react-spinners';
-
-function App() {
+ 
+export default function App() {
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     const timeoutId = setTimeout(() => {
@@ -49,5 +49,3 @@ function App() {
   )
     }
 
-
-export default App

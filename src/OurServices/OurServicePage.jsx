@@ -6,12 +6,15 @@ import { Link } from 'react-router-dom';
 
 export default function OurServicePage() {
   return (
-    <div style={{ marginTop: "5rem" }}>
-      <div style={{ height: "20vh", display: "flex", justifyContent: "center", alignItems: "center", background:"#fff" }}>
+    <div>
+        <Navbar />
+        <div className='bg-light'>
+      <div style={{ height: "20vh", display: "flex", justifyContent: "center", alignItems: "center"}}>
         <Link to='/' style={{ textDecoration: "none", color: "#000", paddingRight: ".2rem" }}> Home </Link>  &gt; Our Services  </div>
-      <Navbar />
       <OurServices />
+      </div>
       <Footer />
+      
     </div>
   )
 }

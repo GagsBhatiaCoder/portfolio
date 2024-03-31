@@ -1,76 +1,49 @@
-import React,{useState} from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import './Comp.css';
-import Logo from '../assets/GagsLogo.png'
+import Logo from '../assets/Gagslogo.png'
 
 
-const MenuData = [
-    {
-      title:'Home',
-      url: '/',
-      cName: 'navLinks',
-      icon: 'fa-solid fa-house'
-    },
-    {
-      title:'About',
-      url: '/about',
-      cName: 'navLinks',
-      icon: 'fa-solid fa-circle-info'
-    },
-    {
-      title:'Services',
-      url: '/service',
-      cName: 'navLinks',
-      icon: 'fa-solid fa-briefcase'
-    },
-    {
-      title:'Blog',
-      url: '/blogPage',
-      cName: 'navLinks',
-      icon: 'fa-solid fa-blog'
-    },
-    {
-      title:'Contact-Us',
-      url: '/contact',
-      cName: 'navLinksContact',
-    }
-  ]
 export default function Navbar() {
-    const [clicked, SetClicked] = useState(false);
-    const navigate = useNavigate()
-
-    const toggleMenu = () =>{
-      SetClicked(!clicked)
-    
-    }
-    const handleNavigation = (url) => {
-      SetClicked(false);
-      navigate(url)
-      scrollToTop()
-
-    }
-    const scrollToTop = () => {
-      window.scrollTo(0, 0)
-      document.title = "Portfolio Website"
-    }
   return (
     <>
-       <nav className="navbarItems">
-      <Link to="/" onClick={scrollToTop} className="logo" ><img className="logo-img" src={Logo} alt="Company Logo" /></Link>
-      <div className="menuBars" onClick={toggleMenu}>
-      <i className={clicked ? "fas fa-times" : "fas fa-bars"}></i>
-      </div>
-   <ul className= {clicked ? "navMenu active" : "navMenu"}>
-    {MenuData.map((item, index) => {
-      return(
-        <li key={index}>
-          <Link to={item.url} className={item.cName} onClick={() => handleNavigation(item.url) }> <i className={item.icon} ></i>{item.title}</Link>
-          </li>
-      )
-    })}
-   
-   </ul>
-      </nav>
+      <nav className="navbar navbar-expand-lg ">
+  <div className="container-fluid">
+    <Link className="navbar-brand ms-1" to="/"><img style={{width:"85px"}} src={Logo} alt="logo" /></Link>
+    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon"></span>
+    </button>
+    <div className="collapse navbar-collapse " id="navbarSupportedContent">
+      <ul className="navbar-nav me-auto mb-2 mb-lg-0 " style={{ marginLeft: "auto", marginRight: "auto" }}>
+        <li className="nav-item">
+          <Link className="nav-link active" aria-current="page" to="/">Home</Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link active" aria-current="page" to="/about">About</Link>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link active" aria-current="page" href="/service">Services</a>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link active" aria-current="page" to="/blogpage">Blog</Link>
+        </li>
+        <li className="nav-item dropdown">
+          <Link className="nav-link dropdown-toggle" to="/projects" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Projects
+          </Link>
+          <ul className="dropdown-menu">
+            <li><Link className="dropdown-item" to="https://gagsecom.netlify.app/" target='_blank'>Ecommerce Website</Link></li>
+            <li><Link className="dropdown-item" to="https://gags-weather-app.netlify.app/" target='_blank'>Weather App</Link></li>
+            <li><Link className="dropdown-item" to="https://samaylegal.netlify.app/" target='_blank'>Legal Service Website</Link></li>
+          </ul>
+        </li>
+      </ul>
+    <div className="d-flex">
+      <Link className='btn btn-outline-light me-1' to="/contact">Contact Us</Link>
+    </div>
+    </div>
+  </div>
+</nav>
     </>
   )
 }
