@@ -1,18 +1,18 @@
 import React from 'react'
 import './Comp.css'
 import {Link} from 'react-router-dom'
+import Logo from '../assets/Gagslogo2.png'
 
 export default function Footer() {
   return (
     <>
       <div className='footer'>
         <div className="footer1">
-          <div>
-            <h3 className="footer-title">About Us</h3>
+          <div >
+            <img src={Logo} alt="logo" style={{width:"150px"}}/>
             <p className="footer-info">
-              Do you want to be even more successful?<br />
-              Learn to love learning and growth. <br />
-              The more effort you put into improving your skills,
+            Enhancing Business Growth with Creative Web Solutions. <br />
+            Crafting engaging and user-friendly digital experiences 
             </p>
           </div>
           <div>
